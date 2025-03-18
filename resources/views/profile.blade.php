@@ -53,9 +53,9 @@
 
     <div class="profile-card">
         <div class="profile-img" style="background-image: url('{{ asset('img/profile.jpeg') }}');"></div>
-        <div class="profile-info">Cahya Nayla Dwi Putri Ramadanti {{ $nama }}</div>
-        <div class="profile-info">2307051008 {{ $npm }}</div>
-        <div class="profile-info">D3MI {{ $kelas }}</div>
+        <div class="profile-info"> {{ $nama }}</div>
+        <div class="profile-info"> {{ $npm }}</div>
+        <div class="profile-info"> {{ $kelas }}</div>
     </div>   
 
 </body>
