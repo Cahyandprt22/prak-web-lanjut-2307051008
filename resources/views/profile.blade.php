@@ -20,7 +20,7 @@
             margin: 0;
         }
         .profile-card {
-            background: rgba(245, 222, 179); /* Semi transparan */
+            background: rgba(245, 222, 179, 0.9);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -53,9 +53,9 @@
 
     <div class="profile-card">
         <div class="profile-img" style="background-image: url('{{ asset('img/profile.jpeg') }}');"></div>
-        <div class="profile-info"> {{ $nama }}</div>
-        <div class="profile-info"> {{ $npm }}</div>
-        <div class="profile-info"> {{ $kelas }}</div>
+        <div class="profile-info">Nama: {{ $nama }}</div>
+        <div class="profile-info">NPM: {{ $npm }}</div>
+        <div class="profile-info">Kelas: {{ $nama_kelas ?? 'Kelas tidak ditemukan' }}</div>
     </div>   
 
 </body>
