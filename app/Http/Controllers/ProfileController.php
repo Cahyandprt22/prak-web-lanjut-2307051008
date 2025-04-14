@@ -6,13 +6,28 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profile($nama = "", $kelas = "", $npm ="")
+    /**
+     * Menampilkan halaman profile dengan parameter opsional.
+     * 
+     * @param string|null $nama
+     * @param string|null $kelas
+     * @param string|null $npm
+     * @return \Illuminate\View\View
+     */
+    public function profile($nama = null, $kelas = null, $npm = null)
     {
-        $data = [
-            'nama' => $nama, 
-            'kelas' => $kelas,
-            'npm' => $npm,
-        ]; 
-        return view('profile', $data);
+        // Mengirim data ke view
+        return view('profile', compact('nama', 'kelas', 'npm'));
     }
-}
+
+    /**
+     * Menampilkan halaman profile tanpa parameter.
+     * 
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        // Menampilkan view profile tanpa parameter
+        return view('profile');
+    }
+} 
